@@ -1,0 +1,17 @@
+Dear ${PERSON_NAME},
+
+This is an automated message.
+
+Thank you for filling out the UBC Pottery Club's sign up form.
+
+Your form was received at ${TIME_RECD}
+
+You were number ${LINE} in the queue
+
+Around 70 people were contacted.
+
+If a person before you has not accepted their spot, you will be contacted.
+
+We do not have the capacity to reply to individual emails. (We're students too :) )
+
+Your friendly neighbourhood pottery execs
