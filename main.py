@@ -17,7 +17,10 @@ def get_contacts(filename):
     names = []
     emails = []
     seqs = []
-    i = 287
+    """
+    This is the index you want to start from
+    """
+    i = 1
     with open(filename, mode='r', encoding='utf-8') as contacts_file:
         for a_contact in contacts_file:
             dates.append(a_contact.split()[0])
@@ -39,13 +42,13 @@ def read_template(filename):
     return Template(template_file_content)
 
 def main():
-    dates, times, names, emails, seqs = get_contacts('mycontacts.txt') # read contacts
+    dates, times, names, emails, seqs = get_contacts('testcontacts.txt') # read contacts
     message_template = read_template('message.txt')
 
     # set up the SMTP server
     s = smtplib.SMTP(host='smtp.gmail.com', port=587)
     s.starttls()
-    s.login('ubcpotteryclub@gmail.com', 'execsonly')
+    s.login('ubcpotteryclub@gmail.com', 'password')
 
     # For each contact, send the email:
     for date, time, name, email, seq in zip(dates, times, names, emails, seqs):
